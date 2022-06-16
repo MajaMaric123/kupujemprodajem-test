@@ -25,6 +25,12 @@ public class Domaci1 {
 
         WebElement ad = driver.findElement(By.xpath("//*[@id=\"adDescription7321776\"]/a"));
         ad.click();
+
+        String title = String.valueOf(driver.findElement(By.className("oglas-title")));
+        String expected = "iPhone 13, iPhone 12, iPhone 11 - NOVO!";
+
+        if(title.equals(expected)){
+            System.out.println("Validno!");}
     }
 }
 
